@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submit Your Recipe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+
+  body {
+  font-family: 'Quicksand', sans-serif;
+  background-color:#927EB0;
+  padding: 20px;
+  color: #333;
+}
+
+.recipe-box {
+  background-color: #fff8e7;
+  
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 20px;
+  
+}
+
+h2 {
+  color:#fffaf5;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.input-box {
+  width: 90%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.input-row {
+  display: flex;
+  gap: 20px;
+}
+
+.add-btn, .submit-btn {
+  background-color: #927EB0;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.item-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.item-list li {
+  background-color: #fff;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  border: 1px solid #927EB0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+
+.item-list button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  
+}
+
+.thank-you {
+  display: none;
+  background-color: #dff0d8;
+  color: #3c763d;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+  </style>
+</head>
+<body>
+
+  <h2>Send Us Your Recipes and get Featured in our Cook Book</h2>
+    <section id="submit-recipe" class="recipe-box">
+    
+    
+    <label for="recipeTitle">Recipe Title:</label>
+    <input type="text" id="recipeTitle" placeholder="e.g., Cheesy Veg Pasta" class="input-box">
+
+    <div class="list-section">
+      <label>Add Ingredients:</label>
+      <div class="input-row">
+        <input type="text" id="ingredientInput" placeholder="e.g., 1 cup cheese" class="input-box">
+        <button type="button" class="add-btn" onclick="addIngredient()">Add</button>
+      </div>
+      <ul id="ingredientList" class="item-list"></ul>
+    </div>
+
+    <div class="list-section">
+      <label>Add Steps:</label>
+      <div class="input-row">
+        <input type="text" id="stepInput" placeholder="e.g., Boil the pasta" class="input-box">
+        <button type="button" class="add-btn" onclick="addStep()">Add</button>
+      </div>
+      <ul id="stepList" class="item-list"></ul>
+    </div>
+
+    <button class="submit-btn" onclick="submitRecipe()">Submit Recipe</button>
+
+    <div id="thankYouMessage" class="thank-you">
+      Thank you for submitting your recipe!
+    </div>
+  </section>
+
+
+
+ <script>
+ function addIngredient() {
+  const input = document.getElementById("ingredientInput");
+  const value = input.value.trim();
+  if (value) {
+    const li = document.createElement("li");
+    li.innerHTML = `${value} <button onclick="this.parentElement.remove()">×</button>`;
+    document.getElementById("ingredientList").appendChild(li);
+    input.value = "";
+  }
+}
+
+function addStep() {
+  const input = document.getElementById("stepInput");
+  const value = input.value.trim();
+  if (value) {
+    const li = document.createElement("li");
+    li.innerHTML = `${value} <button onclick="this.parentElement.remove()">×</button>`;
+    document.getElementById("stepList").appendChild(li);
+    input.value = "";
+  }
+}
+
+function submitRecipe() {
+  const title = document.getElementById("recipeTitle").value.trim();
+  const ingredients = Array.from(document.querySelectorAll("#ingredientList li"))
+    .map(li => li.textContent.replace("×", "").trim());
+  const steps = Array.from(document.querySelectorAll("#stepList li"))
+    .map(li => li.textContent.replace("×", "").trim());
+
+  if (!title || ingredients.length === 0 || steps.length === 0) {
+    alert("Please fill out the title, ingredients, and steps.");
+    return;
+  }
+
+  console.log("Recipe Submitted:", {
+    title,
+    ingredients,
+    steps
+  });
+
+  document.getElementById("thankYouMessage").style.display = "block";
+  document.getElementById("recipeTitle").value = "";
+  document.getElementById("ingredientList").innerHTML = "";
+  document.getElementById("stepList").innerHTML = "";
+}
+
+</script>
+
+
+</body>
+</html>
