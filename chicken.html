@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chicken</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #fff6f2;
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      color: #6b4b3c;
+      margin-bottom: 40px;
+      font-size: 50px;
+      opacity: 0;
+      animation: popIn 0.8s ease-out forwards;
+    }
+
+    .recipe-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 40px;
+      justify-content: center;
+    }
+
+    .r1, .ingredients {
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+    }
+
+    .r1 img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease-out forwards;
+      position: relative;
+      top: 20px;
+    }
+
+    .ingredients {
+      opacity: 0;
+      transform: translateX(50px);
+      animation: slideInRight 1s ease-out 0.6s forwards;
+    }
+
+    .ingredients h2 {
+      color: #6b4b3c;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .ingredients ul {
+      padding-left: 40px;
+    }
+
+    .ingredients li {
+      margin-bottom: 15px;
+      font-size: 18px;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .ingredients li:hover {
+      transform: scale(1.02);
+      color: #6b4b3c;
+    }
+
+    .steps {
+      border-top: 2px solid #e0bca3;
+      padding-top: 30px;
+      margin-top: 20px;
+      opacity: 0;
+      transform: translateX(-50px);
+      animation: slideInLeft 1s ease-out 1.2s forwards;
+    }
+
+    .steps h2 {
+      color: #6b4b3c;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .steps ol {
+      padding-left: 40px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .steps li {
+      margin-bottom: 15px;
+      font-size: 18px;
+      line-height: 1.6;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .steps li:hover {
+      transform: scale(1.02);
+      color: #6b4b3c;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInLeft {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes popIn {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      .steps ol,
+      .ingredients ul {
+        padding-left: 20px;
+      }
+
+      .ingredients h2 {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>VFried Chicken</h1>
+
+  <div class="recipe-container">
+    <div class="r1">
+      <img src="images/chicken.png" alt="chick">
+    </div>
+    <div class="ingredients">
+      <h2>Ingredients</h2>
+      <ul>
+        <li>500g chicken pieces (bone-in or boneless)</li>
+        <li>1 cup buttermilk (or 1/2 cup yogurt + 1/2 cup water)</li>
+        <li>1 tsp red chili powder</li>
+        <li>1/2 tsp black pepper</li>
+        <li>1 tsp garlic powder (or minced garlic)</li>
+        <li>1/2 tsp salt</li>
+        <li>1 cup all-purpose flour</li>
+        <li>1/2 cup cornflour (optional, for extra crispiness)</li>
+        <li>Oil for deep frying</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="steps">
+    <h2>Steps</h2>
+    <ol>
+      <li>Marinate chicken with buttermilk, chili powder, pepper, garlic, and salt. Rest for 1 hour or overnight in the fridge.</li>
+      <li>In a bowl, mix all-purpose flour and cornflour with a pinch of salt and pepper.</li>
+      <li>Heat oil in a deep pan or kadai for frying.</li>
+      <li>Remove chicken from marinade, coat well in flour mixture, and shake off excess.</li>
+      <li>Fry in hot oil on medium heat until golden brown and cooked through (about 8–10 minutes depending on size).</li>
+      <li>Drain on paper towels and serve hot with ketchup or dip of choice.</li>
+    </ol>
+  </div>
+
+</body>
+</html>
