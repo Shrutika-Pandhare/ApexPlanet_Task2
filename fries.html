@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fries</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #fff6f2;
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      color: #6b4b3c;
+      margin-bottom: 40px;
+      font-size: 50px;
+      opacity: 0;
+      animation: popIn 0.8s ease-out forwards;
+    }
+
+    .recipe-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 40px;
+      justify-content: center;
+    }
+
+    .r1, .ingredients {
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+    }
+
+    .r1 img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    .ingredients {
+      opacity: 0;
+      transform: translateX(50px);
+      animation: slideInRight 1s ease-out 0.6s forwards;
+    }
+
+    .ingredients h2 {
+      color: #6b4b3c;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .ingredients ul {
+      padding-left: 40px;
+    }
+
+    .ingredients li {
+      margin-bottom: 15px;
+      font-size: 18px;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .ingredients li:hover {
+      transform: scale(1.02);
+      color: #6b4b3c;
+    }
+
+    .steps {
+      border-top: 2px solid #e0bca3;
+      padding-top: 30px;
+      margin-top: 20px;
+      opacity: 0;
+      transform: translateX(-50px);
+      animation: slideInLeft 1s ease-out 1.2s forwards;
+    }
+
+    .steps h2 {
+      color: #6b4b3c;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .steps ol {
+      padding-left: 40px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .steps li {
+      margin-bottom: 15px;
+      font-size: 18px;
+      line-height: 1.6;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .steps li:hover {
+      transform: scale(1.02);
+      color: #6b4b3c;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInLeft {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes popIn {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      .steps ol,
+      .ingredients ul {
+        padding-left: 20px;
+      }
+
+      .ingredients h2 {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Sweet Potato Fries</h1>
+
+  <div class="recipe-container">
+    <div class="r1">
+      <img src="images/fries1.png" alt="fries">
+    </div>
+    <div class="ingredients">
+      <h2>Ingredients</h2>
+      <ul>
+        <li>2 large sweet potatoes, peeled and cut into fries</li>
+        <li>2 tbsp olive oil</li>
+        <li>1 tsp paprika</li>
+        <li>1/2 tsp garlic powder</li>
+        <li>Salt and pepper to taste</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="steps">
+    <h2>Steps</h2>
+    <ol>
+      <li>Preheat oven to 220°C (425°F).</li>
+      <li>In a large bowl, toss sweet potato fries with olive oil, paprika, garlic powder, salt, and pepper.</li>
+      <li>Arrange fries in a single layer on a baking sheet lined with parchment paper.</li>
+      <li>Bake for 20-25 minutes, turning halfway through, until crispy and golden.</li>
+      <li>Serve hot with your favorite dip.</li>
+
+    </ol>
+  </div>
+
+</body>
+</html>
