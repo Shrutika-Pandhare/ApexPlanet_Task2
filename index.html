@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Mama's Cook Book</title>
+</head>
+
+<body>
+    <div class="announcement-banner">
+        Grab a Chance to Get Featured in Our Recipe Book!!
+        Send us Your Delicious Recipes that your Mama be cooking since Ages.  (❁´◡`❁)
+    </div>
+
+    <header>
+      <img  class="logo" src="images/logo.svg" alt="logo">
+      <nav>
+        <ul class="nav_links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#recipes">Recipes</a></li>
+          <li><a href="submit.html">Send your Recipes</a></li>
+        </ul>
+      </nav>
+
+      <a class="cta" href="contactus.html"><button>Contact</button></a>
+    </header>
+
+
+    <div class="banner1">
+        <img src="images/banner2.png" alt="banner 1">
+        <div class="banner-text">
+        <p>Get the taste of Mama's Old Recipes on your fingertips in Seconds! </p>
+        </div>
+       </div>
+     </div>
+
+      <div class="back2" id="recipes">
+        <h1>Have A Look</h1>
+      </div>
+
+
+ <div class="wrapper1">
+  <div class="card">
+    <img src="images/veg.jpg" alt="veg banner">
+    <div class="info">
+      <h1>Veg</h1>
+      <p>Fresh & healthy vegetarian meals made with love.</p>
+      <a href="veg.html" class="btn">Read more</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="images/nonveg.jpg" alt="nonveg banner">
+    <div class="info">
+      <h1>Non-Veg</h1>
+      <p>Delicious meat recipes inspired by mama’s kitchen.</p>
+      <a href="nonveg.html" class="btn">Read more</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="images/vegan.jpg" alt="vegan banner">
+    <div class="info">
+      <h1>Vegan</h1>
+      <p>Plant-based, wholesome meals for everyone.</p>
+      <a href="vegan.html" class="btn">Read more</a>
+    </div>
+  </div>
+</div>
+
+<form class="feedback-container" id="feedbackForm">
+    <div class="left-panel">
+      <h2>Feel free to drop us your feedback. </h2>
+      <img src="images/feedback.png" alt="">
+    </div>
+
+    <div class="right-panel">
+      <label class="question">How satisfied are you with this Cook Book?</label>
+      <div class="rating-scale">
+        <div class="numbers">
+          <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span>
+          <span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+        </div>
+        <input type="range" min="0" max="10" value="5" id="slider">
+        <div class="labels">
+          <span>Not at all likely</span>
+          <span>Extremely likely</span>
+        </div>
+      </div>
+
+      <div class="hello">
+        Enter your Name:<input type="text" id="name" name="text">
+        <span class="error" id="nameError"></span> <br><br>
+
+        Enter your Email:<input type="email"  id="email" name="email">
+        <span class="error" id="emailError"></span> <br><br>
+      </div>
+
+      
+      <textarea id="feedback" placeholder="Please tell us your reasons for giving this score here..."></textarea>
+      <span class="error" id="feedbackError"></span><br>
+
+      <button type="submit" class="feedback-btn">Submit</button>
+    </div>
+  </form>
+
+<script src="script.js"></script>
+
+</body>
+</html>
