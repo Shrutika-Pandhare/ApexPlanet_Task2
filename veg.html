@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <title>vegetarian</title>
+    <style>
+
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+  justify-content: center;
+  background-color: #927EB0;;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 250px;
+   background-color: #F8ECD8;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  position: relative;
+  left: 120px;
+}
+
+.card img {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .info {
+  padding: 20px;
+  width: 60%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+
+}
+
+.card:hover .info {
+  opacity: 1;
+}
+
+.card h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #6b4b3c;
+}
+
+.card p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #444;
+}
+
+.card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:#927EB0;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  width: fit-content;
+}
+
+
+    </style>
+</head>
+<body>
+
+<div class="card-container">
+<div class="card">
+    <img src="images/curry.jpg" alt="curry">
+    <div class="info">
+      <h1>Vegetable Curry</h1>
+      <p>Comforting medley of fresh veggies cooked in flavorful, spiced gravy!</p>
+      <a href="curry.html" class="btn">Take a Glance</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="images/dosa.jpg" alt="dosa">
+    <div class="info">
+      <h1>Masala Dosa</h1>
+      <p>Crispy dosa filled with spicy potato masala!</p>
+      <a href="dosa.html" class="btn">Take a Glance</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="images/panner.jpg" alt="panner">
+    <div class="info">
+      <h1>Panner Butter Masala</h1>
+      <p>Rich, buttery tomato gravy with tender paneer cubes!</p>
+      <a href="panner.html" class="btn">Take a Glance</a>
+    </div>
+  </div>
+
+   <div class="card">
+    <img src="images/noodles.jpg" alt="noodle">
+    <div class="info">
+      <h1> Veg Garlic Noodles</h1>
+      <p>Spicy stir-fried noodles with garlic and veggies!</p>
+      <a href="vegnoodle.html" class="btn">Take a Glance</a>
+    </div>
+  </div>
+</div>
+
+ 
+
+    
+</body>
+</html>
