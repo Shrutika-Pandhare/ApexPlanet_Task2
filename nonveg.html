@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <title>Non-vegetarian</title>
+    <style>
+
+      body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+  justify-content: center;
+  background-color: #927EB0;;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 250px;
+   background-color: #F8ECD8;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  position: relative;
+  left: 120px;
+}
+
+.card img {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .info {
+  padding: 20px;
+  width: 60%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+
+}
+
+.card:hover .info {
+  opacity: 1;
+}
+
+.card h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #6b4b3c;
+}
+
+.card p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #444;
+}
+
+.card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:#927EB0;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  width: fit-content;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="card-container">
+<div class="card">
+    <img src="images/biryani.jpg" alt="veg banner">
+    <div class="info">
+      <h1>Chicken Biryani</h1>
+      <p>Fragrant rice cooked with spiced chicken and aromatic herbs!</p>
+      <a href="biryani.html" class="btn">Take a Glance</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="images/egg.jpg" alt="non-veg banner">
+    <div class="info">
+      <h1>Egg Fried Rice</h1>
+      <p>Fluffy rice tossed with eggs and savory seasoning!</p>
+      <a href="egg.html" class="btn">Take a Glance</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="images/friedchick.jpg" alt="vegan banner">
+    <div class="info">
+      <h1>Fried Chicken</h1>
+      <p>Juicy, tender chicken coated in a crispy, golden crust and seasoned with bold, flavorful spice!</p>
+      <a href="chicken.html" class="btn">Take a Glance</a>
+    </div>
+  </div>
+
+   <div class="card">
+    <img src="images/clam.jpg" alt="non-veg banner">
+    <div class="info">
+      <h1>Clam Noodles</h1>
+      <p>Tender noodles tossed with fresh clams in a savory garlic and herb sauce.!</p>
+      <a href="clam.html" class="btn">Take a Glance</a>
+    </div>
+  </div>
+</div>
+
+ 
+
+    
+</body>
+</html>
